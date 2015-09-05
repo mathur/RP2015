@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/PrimaryColor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reflections|Projections"
+        android:padding="8dp"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:id="@+id/txtLogo1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="5dp"
+        android:text="___________________________________________________________________________________________________"
+        android:id="@+id/txtLogoHorizontal"
+        android:layout_below="@+id/txtLogo1"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:paddingTop="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oct 1-4, 2015"
+        android:id="@+id/txtLogo2"
+        android:layout_below="@+id/txtLogoHorizontal"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:paddingTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reflections Projections is more than just a conference"
+        android:id="@+id/textView"
+        android:textColor="#FFF"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="92dp"
+        android:layout_below="@+id/txtLogo2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

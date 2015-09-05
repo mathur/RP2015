@@ -4,10 +4,22 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/speakers"
+            android:id="@+id/about"
             android:checked="false"
             android:icon="@drawable/ic_inbox_black"
-            android:title="@string/speakers_string" />
+            android:title="@string/about_string" />
+
+        <item
+            android:id="@+id/schedule"
+            android:checked="false"
+            android:icon="@drawable/ic_inbox_black"
+            android:title="@string/schedule_string" />
+
+        <item
+            android:id="@+id/faq"
+            android:checked="false"
+            android:icon="@drawable/ic_inbox_black"
+            android:title="@string/faq_string" />
 
     </group>
 </menu>
