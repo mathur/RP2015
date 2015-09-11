@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04:00p"
+        android:id="@+id/txtTime"
+        android:textSize="14dp"
+        android:textColor="#a5a5a5"
+        android:paddingLeft="15dp" />
+
+    <View
+        android:layout_height="wrap_content"
+        android:layout_width="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Startup Panel"
+        android:id="@+id/txtName"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+</LinearLayout>
