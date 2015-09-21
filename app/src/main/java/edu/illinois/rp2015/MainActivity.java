@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         scheduleFragmentTransaction.commit();
                         return true;
                     case R.id.faq:
-                        FAQFragment faqFragment = new FAQFragment();
+                        FaqFragment faqFragment = new FaqFragment();
                         FragmentTransaction faqFragmentTransaction = getSupportFragmentManager().beginTransaction();
                         faqFragmentTransaction.replace(R.id.frame, faqFragment);
                         faqFragmentTransaction.commit();
