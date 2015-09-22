@@ -1,5 +1,6 @@
 package edu.illinois.rp2015;
 
+import android.content.Context;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -7,17 +8,18 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
-
-import com.parse.Parse;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    public static double width;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        width = displaymetrics.widthPixels;
 
         HomeFragment fragment = new HomeFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -61,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         scheduleFragmentTransaction.commit();
                         return true;
                     case R.id.faq:
-                        FaqFragment faqFragment = new FaqFragment();
+                        FAQFragment faqFragment = new FAQFragment();
                         FragmentTransaction faqFragmentTransaction = getSupportFragmentManager().beginTransaction();
                         faqFragmentTransaction.replace(R.id.frame, faqFragment);
                         faqFragmentTransaction.commit();
@@ -88,8 +94,15 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+    }
 
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, getString(R.string.parseAppId), getString(R.string.parseClientKey));
+    @Override
+    protected void onResume() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+        super.onResume();
     }
 }

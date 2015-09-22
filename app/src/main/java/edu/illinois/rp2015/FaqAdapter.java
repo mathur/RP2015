@@ -47,7 +47,6 @@ public class FaqAdapter extends ArrayAdapter<ParseObject> {
         ParseObject event = data.get(position);
         if (event != null) {
             holder.question.setText(Html.fromHtml(event.getString("Question")));
-//            holder.answer.setText(event.getString("Answer"));
             holder.answer.setText(Html.fromHtml(event.getString("Answer")));
             holder.answer.setMovementMethod(LinkMovementMethod.getInstance());
         }

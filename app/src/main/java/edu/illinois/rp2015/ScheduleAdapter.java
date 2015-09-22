@@ -1,6 +1,7 @@
 package edu.illinois.rp2015;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,9 @@ public class ScheduleAdapter extends ArrayAdapter<ParseObject> {
             holder = new ViewHolder();
             holder.time = (TextView) row.findViewById(R.id.txtTime);
             holder.name = (TextView) row.findViewById(R.id.txtName);
+            if(MainActivity.width!=0){
+                holder.time.setWidth((int) (MainActivity.width/3.5));
+            }
 
             row.setTag(holder);
         } else {

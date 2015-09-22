@@ -1,5 +1,6 @@
 package edu.illinois.rp2015;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -17,7 +19,7 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-public class FaqFragment extends Fragment {
+public class FAQFragment extends Fragment {
 
     @Nullable
     @Override
