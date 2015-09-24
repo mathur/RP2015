@@ -1,4 +1,4 @@
-package edu.illinois.rp2015;
+package edu.illinois.rp2015.adapters;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.parse.ParseObject;
 
 import java.util.List;
+
+import edu.illinois.rp2015.MainActivity;
+import edu.illinois.rp2015.R;
 
 public class ScheduleAdapter extends ArrayAdapter<ParseObject> {
 

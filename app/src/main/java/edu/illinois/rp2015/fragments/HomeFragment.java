@@ -1,4 +1,4 @@
-package edu.illinois.rp2015;
+package edu.illinois.rp2015.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.TextView;
+
+import edu.illinois.rp2015.R;
 
 public class HomeFragment extends Fragment {
 

@@ -1,15 +1,11 @@
-package edu.illinois.rp2015;
+package edu.illinois.rp2015.fragments;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -19,25 +15,28 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-public class FAQFragment extends Fragment {
+import edu.illinois.rp2015.R;
+import edu.illinois.rp2015.adapters.ScheduleAdapter;
 
-    @Nullable
+public class ScheduleFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.faq_fragment,container,false);
-        getActivity().getWindow().addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        final ListView faqList = (ListView) v.findViewById(R.id.lstFAQ);
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("FAQ");
+        View v = inflater.inflate(R.layout.schedule_fragment, container, false);
+        final ListView scheduleList = (ListView) v.findViewById(R.id.lstSchedule);
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Events");
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> events, ParseException e) {
                 if (e == null) {
-                    FaqAdapter adapter = new FaqAdapter(getActivity(), R.layout.faq_item_list, events);
-                    faqList.setAdapter(adapter);
+                    ScheduleAdapter adapter = new ScheduleAdapter(getActivity().getApplicationContext(), R.layout.schedule_item_list, events);
+                    scheduleList.setAdapter(adapter);
                 } else {
                     Log.e("Error", e.getMessage());
                 }
             }
         });
+
         return v;
     }
 }

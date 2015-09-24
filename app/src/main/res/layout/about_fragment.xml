@@ -4,114 +4,129 @@
     android:layout_height="match_parent"
     android:background="@color/PrimaryColor">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#FFF"
-        android:layout_margin="15dp"
-        android:weightSum="1"
-        android:id="@+id/outerFrame">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="What is Reflections|Projections?"
-            android:id="@+id/txtHeader"
-            android:padding="15dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_body_main_1"
-            android:id="@+id/txtBody1"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="5dp"
-            android:textColor="#000"
-            android:singleLine="false" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_body_main_2"
-            android:id="@+id/txtBody2"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="15dp"
-            android:textColor="#000" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_body_main_3"
-            android:id="@+id/txtBody3"
-            android:textColor="#000"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="15dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="____________________________________"
-            android:id="@+id/textView2"
-            android:paddingLeft="15dp"
-            android:textColor="#D04040"
-            android:paddingTop="4dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tap here to learn more about:"
-            android:id="@+id/textView3"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:textStyle="italic"
-            android:textColor="#D04040"
-            android:paddingTop="15dp" />
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#FFF"
+            android:layout_margin="15dp"
+            android:weightSum="1"
+            android:id="@+id/outerFrame">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Career Fair, "
-                android:id="@+id/textView4"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="What is Reflections|Projections?"
+                android:id="@+id/txtHeader"
+                android:padding="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_body_main_1"
+                android:id="@+id/txtBody1"
                 android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
                 android:textColor="#000"
-                android:clickable="true" />
+                android:singleLine="false" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mechmania, "
-                android:id="@+id/textView5"
+                android:text="@string/about_body_main_2"
+                android:id="@+id/txtBody2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
                 android:textColor="#000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Puzzlebang, "
-                android:id="@+id/textView6"
-                android:textColor="#000" />
+                android:text="@string/about_body_main_3"
+                android:id="@+id/txtBody3"
+                android:textColor="#000"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Makerfair"
-                android:id="@+id/textView7"
-                android:textColor="#000" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="____________________________________"
+                android:id="@+id/textView2"
+                android:paddingLeft="15dp"
+                android:textColor="#D04040"
+                android:paddingTop="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap here to learn more about:"
+                android:id="@+id/textView3"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textStyle="italic"
+                android:textColor="#D04040"
+                android:paddingTop="15dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Career Fair, "
+                    android:id="@+id/careerFairTV"
+                    android:paddingLeft="15dp"
+                    android:textColor="#000"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mechmania, "
+                    android:id="@+id/mechmaniaTV"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Puzzlebang, "
+                    android:id="@+id/puzzlebangTV"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Makerfair"
+                    android:id="@+id/textView7"
+                    android:textColor="#000" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/learnMore">
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -1,6 +1,8 @@
-package edu.illinois.rp2015;
+package edu.illinois.rp2015.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,25 +17,28 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-public class ScheduleFragment extends Fragment {
+import edu.illinois.rp2015.adapters.FaqAdapter;
+import edu.illinois.rp2015.R;
 
+public class FAQFragment extends Fragment {
+
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.schedule_fragment, container, false);
-        final ListView scheduleList = (ListView) v.findViewById(R.id.lstSchedule);
-
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Events");
+        View v = inflater.inflate(R.layout.faq_fragment,container,false);
+        getActivity().getWindow().addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        final ListView faqList = (ListView) v.findViewById(R.id.lstFAQ);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("FAQ");
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> events, ParseException e) {
                 if (e == null) {
-                    ScheduleAdapter adapter = new ScheduleAdapter(getActivity().getApplicationContext(), R.layout.schedule_item_list, events);
-                    scheduleList.setAdapter(adapter);
+                    FaqAdapter adapter = new FaqAdapter(getActivity(), R.layout.faq_item_list, events);
+                    faqList.setAdapter(adapter);
                 } else {
                     Log.e("Error", e.getMessage());
                 }
             }
         });
-
         return v;
     }
 }

@@ -14,6 +14,11 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import edu.illinois.rp2015.fragments.AboutFragment;
+import edu.illinois.rp2015.fragments.FAQFragment;
+import edu.illinois.rp2015.fragments.HomeFragment;
+import edu.illinois.rp2015.fragments.ScheduleFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;

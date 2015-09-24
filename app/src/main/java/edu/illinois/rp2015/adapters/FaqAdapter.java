@@ -1,4 +1,4 @@
-package edu.illinois.rp2015;
+package edu.illinois.rp2015.adapters;
 
 import android.content.Context;
 import android.text.Html;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.parse.ParseObject;
 
 import java.util.List;
+
+import edu.illinois.rp2015.R;
 
 public class FaqAdapter extends ArrayAdapter<ParseObject> {
 
