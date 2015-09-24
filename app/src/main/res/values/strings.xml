@@ -13,6 +13,13 @@
     <string name="openDrawer">Navigation View Closed</string>
     <string name="settings">Settings</string>
 
+    <!--Learn More Links-->
+    <string name="learn_more_startup"><u>Startup Fair</u></string>
+    <string name="learn_more_career"><u>Career Fair</u></string>
+    <string name="learn_more_mechmania"><u>Mechmania</u></string>
+    <string name="learn_more_puzzlebang"><u>Puzzlebang</u></string>
+    <string name="learn_more_projects"><u>Projects</u></string>
+
     <!-- About Body Text -->
     <string name="about_body_main_1">
         Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign.
@@ -30,15 +37,9 @@
         The Startup Fair at Reflections | Projections brings in many of the fastest-growing, most innovative startups from across the country to connect with the most entrepreneurial, driven students at Illinois. If you’re looking to dive off the deep end and work in a fast-paced, dynamic environment with brilliant co-workers, then the Startup Fair is the place for you. Every startup at the fair is offering hands-on experience, the ability to make a meaningful impact, and the chance to challenge yourself and learn faster than ever before. Make sure you attend the Startup Fair to interact with the breakthrough companies of the future.
     </string>
     <string name="projects_body">
-        Hacker – “A person who combines excellence, playfulness, cleverness and exploration in performed activities.” ~Wikipedia
-                        \n
-                        Hackathon and hacker culture is on the rise, and Illinois has taken it to heart. Many students in ACM@UIUC participate in hackathons, and there are plenty of amazing projects that they have created.
-                        \n
-                        Reflections | Projections and HackIllinios proudly present Projects@RP. Our student hackers and innovators will be demoing their projects and showing off the Illini hacker enthusiasm. Projects will range from SIG projects developed over months to hackathon projects created in days. Come see what Illinois hackers are doing!
+        Hacker – “A person who combines excellence, playfulness, cleverness and exploration in performed activities.” ~Wikipedia\n\nHackathon and hacker culture is on the rise, and Illinois has taken it to heart. Many students in ACM@UIUC participate in hackathons, and there are plenty of amazing projects that they have created.\n\nReflections | Projections and HackIllinois proudly present Projects@RP. Our student hackers and innovators will be demoing their projects and showing off the Illini hacker enthusiasm. Projects will range from SIG projects developed over months to hackathon projects created in days. Come see what Illinois hackers are doing!
     </string>
     <string name="puzzlebang_body">
-        PuzzleBang is an annual puzzle contest held during ACM R|P conferences where participants complete perplexing problems for a chance to win great prizes! Modelled after decade-old Urbana-Champaign traditions, PuzzleBang brings people together in order to solve classical algorithmic puzzles. Students are encouraged to form teams of 2-4 in order to compete in the week-long puzzle challenge. These problems are geared towards both experienced competitors and new participants alike. If you’ve never competed in a puzzle contest before, don’t be afraid to join in on the fun!
-                        \n
-                        Prizes will be awarded to the top 3 teams and extra follow-up prizes will be given to teams that weren’t in the top three, but did well during the week. Come join us for a great time!
+        PuzzleBang is an annual puzzle contest held during ACM R|P conferences where participants complete perplexing problems for a chance to win great prizes! Modelled after decade-old Urbana-Champaign traditions, PuzzleBang brings people together in order to solve classical algorithmic puzzles. Students are encouraged to form teams of 2-4 in order to compete in the week-long puzzle challenge. These problems are geared towards both experienced competitors and new participants alike. If you’ve never competed in a puzzle contest before, don’t be afraid to join in on the fun!\n\nPrizes will be awarded to the top 3 teams and extra follow-up prizes will be given to teams that weren’t in the top three, but did well during the week. Come join us for a great time!
     </string>
 </resources>

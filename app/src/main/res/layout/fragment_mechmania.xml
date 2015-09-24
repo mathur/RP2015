@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mechtest"
-        android:id="@+id/txtBody1"
+        android:id="@+id/mechmaniaDescriptionTV"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingTop="5dp"
