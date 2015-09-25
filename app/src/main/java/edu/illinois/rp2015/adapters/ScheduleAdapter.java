@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.parse.ParseObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import edu.illinois.rp2015.MainActivity;
@@ -51,7 +53,28 @@ public class ScheduleAdapter extends ArrayAdapter<ParseObject> {
 
         ParseObject event = data.get(position);
         if (event != null) {
-            holder.time.setText(event.getDate("StartTime").toString());
+            Date date = event.getDate("StartTime");
+            String AM_PM;
+            int hours = date.getHours();
+            if(hours == 0){
+                hours = 12;
+                AM_PM = "AM";
+            }
+            else if(hours < 12){
+                AM_PM = "AM";
+            }
+            else if(hours == 12){
+                AM_PM = "PM";
+            }
+            else{
+                hours = hours - 12;
+                AM_PM = "PM";
+            }
+
+            String minutes = String.format("%02d", date.getMinutes());
+            String time = date.getMonth() + "/" + date.getDate() + " " + hours + ":" + minutes + " " + AM_PM;
+            //holder.time.setText(event.getDate("StartTime").toString());
+            holder.time.setText(time);
             holder.name.setText(event.getString("Name"));
         }
 

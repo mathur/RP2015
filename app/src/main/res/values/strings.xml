@@ -1,6 +1,6 @@
 <resources>
     <!-- App title -->
-    <string name="app_name">Reflections Projections 2015</string>
+    <string name="app_name">RP 2015</string>
 
     <!-- Navigation Drawer -->
     <string name="home_string">Home</string>
