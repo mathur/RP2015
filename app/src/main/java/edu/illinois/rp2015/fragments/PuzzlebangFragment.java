@@ -25,7 +25,7 @@ public class PuzzlebangFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final ScrollView scrollView = (ScrollView) getActivity().findViewById(R.id.aboutScroll);
+        final ScrollView scrollView = (ScrollView) view.findViewById(R.id.aboutScroll);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
 }

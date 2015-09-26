@@ -72,7 +72,7 @@ public class ScheduleAdapter extends ArrayAdapter<ParseObject> {
             }
 
             String minutes = String.format("%02d", date.getMinutes());
-            String time = date.getMonth() + "/" + date.getDate() + " " + hours + ":" + minutes + " " + AM_PM;
+            String time = date.getMonth() + 1 + "/" + date.getDate() + " " + hours + ":" + minutes + " " + AM_PM;
             //holder.time.setText(event.getDate("StartTime").toString());
             holder.time.setText(time);
             holder.name.setText(event.getString("Name"));

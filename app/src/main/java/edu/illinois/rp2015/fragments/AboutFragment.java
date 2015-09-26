@@ -65,6 +65,7 @@ public class AboutFragment extends Fragment {
             }
         });
 
+
         puzzlebang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +92,7 @@ public class AboutFragment extends Fragment {
     }
 
     public void showInitialFragment(){
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         StartupFairFragment startupFairFragment = new StartupFairFragment();
         fragmentTransaction.replace(R.id.learnMore, startupFairFragment);

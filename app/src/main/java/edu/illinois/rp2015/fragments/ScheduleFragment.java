@@ -1,5 +1,6 @@
 package edu.illinois.rp2015.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -24,12 +25,13 @@ public class ScheduleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.schedule_fragment, container, false);
         final ListView scheduleList = (ListView) v.findViewById(R.id.lstSchedule);
+        final Context context = getActivity();
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Events");
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> events, ParseException e) {
                 if (e == null) {
-                    ScheduleAdapter adapter = new ScheduleAdapter(getActivity().getApplicationContext(), R.layout.schedule_item_list, events);
+                    ScheduleAdapter adapter = new ScheduleAdapter(context, R.layout.schedule_item_list, events);
                     scheduleList.setAdapter(adapter);
                 } else {
                     Log.e("Error", e.getMessage());
