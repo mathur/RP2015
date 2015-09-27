@@ -28,7 +28,6 @@ public class AboutFragment extends Fragment {
         TextView careerFair = (TextView) v.findViewById(R.id.careerFairTV);
         TextView mechmania = (TextView) v.findViewById(R.id.mechmaniaTV);
         TextView puzzlebang = (TextView) v.findViewById(R.id.puzzlebangTV);
-        TextView projects = (TextView) v.findViewById(R.id.projectsTV);
 
         showInitialFragment();
 
@@ -73,17 +72,6 @@ public class AboutFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 PuzzlebangFragment puzzlebangFragment = new PuzzlebangFragment();
                 fragmentTransaction.replace(R.id.learnMore, puzzlebangFragment);
-                fragmentTransaction.commit();
-            }
-        });
-
-        projects.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                ProjectsFragment projectsFragment = new ProjectsFragment();
-                fragmentTransaction.replace(R.id.learnMore, projectsFragment);
                 fragmentTransaction.commit();
             }
         });

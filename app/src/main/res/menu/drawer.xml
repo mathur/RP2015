@@ -21,5 +21,10 @@
             android:icon="@drawable/ic_inbox_black"
             android:title="@string/faq_string" />
 
+        <item
+            android:id="@+id/speakers"
+            android:checked="false"
+            android:icon="@drawable/ic_inbox_black"
+            android:title="@string/speakers_string" />
     </group>
 </menu>

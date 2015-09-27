@@ -42,4 +42,5 @@
     <string name="puzzlebang_body">
         PuzzleBang is an annual puzzle contest held during ACM R|P conferences where participants complete perplexing problems for a chance to win great prizes! Modelled after decade-old Urbana-Champaign traditions, PuzzleBang brings people together in order to solve classical algorithmic puzzles. Students are encouraged to form teams of 2-4 in order to compete in the week-long puzzle challenge. These problems are geared towards both experienced competitors and new participants alike. If you’ve never competed in a puzzle contest before, don’t be afraid to join in on the fun!\n\nPrizes will be awarded to the top 3 teams and extra follow-up prizes will be given to teams that weren’t in the top three, but did well during the week. Come join us for a great time!
     </string>
+    <string name="speakers_string">Speakers</string>
 </resources>

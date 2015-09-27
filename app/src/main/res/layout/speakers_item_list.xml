@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/txtName"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Talk"
+        android:id="@+id/txtTalkTitle"
+        android:layout_below="@+id/txtName"
+        android:textColor="#000"
+        android:textSize="13dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/txtTalk"
+        android:layout_below="@+id/txtTalkTitle"
+        android:textColor="#000"
+        android:textSize="13dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Bio"
+        android:id="@+id/txtBioTitle"
+        android:layout_below="@+id/txtTalk"
+        android:textColor="#000"
+        android:textSize="13dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/txtBio"
+        android:layout_below="@+id/txtBioTitle"
+        android:textColor="#000"
+        android:textSize="13dp" />
+
+</RelativeLayout>

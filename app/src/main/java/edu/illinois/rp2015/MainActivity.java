@@ -14,10 +14,12 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import edu.illinois.rp2015.adapters.SpeakersAdapter;
 import edu.illinois.rp2015.fragments.AboutFragment;
 import edu.illinois.rp2015.fragments.FAQFragment;
 import edu.illinois.rp2015.fragments.HomeFragment;
 import edu.illinois.rp2015.fragments.ScheduleFragment;
+import edu.illinois.rp2015.fragments.SpeakersFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
                         FragmentTransaction faqFragmentTransaction = getSupportFragmentManager().beginTransaction();
                         faqFragmentTransaction.replace(R.id.frame, faqFragment);
                         faqFragmentTransaction.commit();
+                        return true;
+                    case R.id.speakers:
+                        SpeakersFragment speakersFragment = new SpeakersFragment();
+                        FragmentTransaction speakerFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        speakerFragmentTransaction.replace(R.id.frame, speakersFragment);
+                        speakerFragmentTransaction.commit();
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(),"Something went wrong!",Toast.LENGTH_SHORT).show();
