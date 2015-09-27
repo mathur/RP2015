@@ -15,6 +15,8 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import edu.illinois.rp2015.adapters.FaqAdapter;

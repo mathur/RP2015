@@ -14,6 +14,8 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import edu.illinois.rp2015.R;
@@ -31,6 +33,7 @@ public class ScheduleFragment extends Fragment {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> events, ParseException e) {
                 if (e == null) {
+                    Collections.sort(events, new CustomComparator());
                     ScheduleAdapter adapter = new ScheduleAdapter(context, R.layout.schedule_item_list, events);
                     scheduleList.setAdapter(adapter);
                 } else {
@@ -40,5 +43,17 @@ public class ScheduleFragment extends Fragment {
         });
 
         return v;
+    }
+
+    private class CustomComparator implements Comparator<ParseObject> {
+        @Override
+        public int compare(ParseObject o1, ParseObject o2) {
+            try{
+                return o1.getDate("StartTime").compareTo(o2.getDate("StartTime"));
+            }
+            catch(Exception e){
+                return 0;
+            }
+        }
     }
 }
