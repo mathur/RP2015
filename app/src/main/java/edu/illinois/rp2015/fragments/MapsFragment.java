@@ -38,4 +38,5 @@ public class MapsFragment extends Fragment {
         mapsList.setAdapter(adapter);
         return v;
     }
+
 }
