@@ -18,6 +18,7 @@ import edu.illinois.rp2015.adapters.SpeakersAdapter;
 import edu.illinois.rp2015.fragments.AboutFragment;
 import edu.illinois.rp2015.fragments.FAQFragment;
 import edu.illinois.rp2015.fragments.HomeFragment;
+import edu.illinois.rp2015.fragments.MapsFragment;
 import edu.illinois.rp2015.fragments.ScheduleFragment;
 import edu.illinois.rp2015.fragments.SpeakersFragment;
 
@@ -84,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
                         FragmentTransaction speakerFragmentTransaction = getSupportFragmentManager().beginTransaction();
                         speakerFragmentTransaction.replace(R.id.frame, speakersFragment);
                         speakerFragmentTransaction.commit();
+                        return true;
+                    case R.id.maps:
+                        MapsFragment mapsFragment = new MapsFragment();
+                        FragmentTransaction mapsFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        mapsFragmentTransaction.replace(R.id.frame, mapsFragment);
+                        mapsFragmentTransaction.commit();
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(),"Something went wrong!",Toast.LENGTH_SHORT).show();

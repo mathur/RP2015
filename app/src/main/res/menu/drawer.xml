@@ -26,5 +26,11 @@
             android:checked="false"
             android:icon="@drawable/ic_action_navbar"
             android:title="@string/speakers_string" />
+
+        <item
+            android:id="@+id/maps"
+            android:checked="false"
+            android:icon="@drawable/ic_action_navbar"
+            android:title="@string/maps_string" />
     </group>
 </menu>
